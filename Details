@@ -1,0 +1,47 @@
+
+The phaces of the implementation are the following:
+Lexical Analysis
+Syntax Analysis
+Intermidiate Code Generation
+Symbol Table / Meaning Analysis
+Final Code Generation / Code optimization
+
+Grammar of Cimple:
+
+program : program ID block .
+block : declarations subprograms statements
+declarations : ( declare varlist ; )∗
+varlist : ID ( , ID )∗ | ε
+subprograms : ( subprogram )∗
+subprogram : function ID ( formalparlist ) block | procedure ID ( formalparlist ) block
+formalparlist : formalparitem ( , formalparitem )∗ | ε
+formalparitem : in ID | inout ID
+statements : statement ; | { statement ( ; statement )∗ }
+statement : assignStat | ifStat | whileStat | switchcaseStat | forcaseStat | incaseStat | callStat | returnStat | inputStat | printStat | ε
+assignStat : ID := expression
+ifStat : if ( condition ) statements elsepart
+elsepart : else statements | ε
+
+whileStat : while ( condition ) statements
+switchcaseStat: switchcase ( case ( condition ) statements )∗ default statements
+forcaseStat : forcase ( case ( condition ) statements )∗ default statements
+incaseStat : incase ( case ( condition ) statements )∗
+returnStat : return( expression )
+callStat : call ID( actualparlist )
+printStat : print( expression )
+inputStat : input( ID )
+actualparlist : actualparitem ( , actualparitem )∗ | ε
+actualparitem : in expression | inout ID
+condition : boolterm ( or boolterm )∗
+
+boolterm : boolfactor ( and boolfactor )∗
+boolfactor : not [ condition ] | [ condition ] | expression REL_OP expression
+expression : optionalSign term ( ADD_OP term )∗
+term : factor ( MUL_OP factor )∗
+factor : INTEGER | ( expression ) | ID idtail
+idtail : ( actualparlist ) | ε
+optionalSign : ADD_OP | ε
+REL_OP : = | <= | >= | > | < | <> ; ADD_OP : + | 
+MUL_OP : * | /
+INTEGER : [0-9]+
+ID : [a-zA-Z][a-zA-Z0-9]*
