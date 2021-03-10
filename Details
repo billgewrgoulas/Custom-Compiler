@@ -1,12 +1,12 @@
 
 The phaces of the implementation are the following:
-Lexical Analysis
-Syntax Analysis
-Intermidiate Code Generation
-Symbol Table / Meaning Analysis
-Final Code Generation / Code optimization
+•Lexical Analysis
+•Syntax Analysis
+•Intermidiate Code Generation
+•Symbol Table / Meaning Analysis
+•Final Code Generation / Code optimization
 
-Grammar of Cimple:
+Grammar of Cimple (follows the LL(1) principle):
 
 program : program ID block .
 block : declarations subprograms statements
