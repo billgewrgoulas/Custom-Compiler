@@ -6,7 +6,7 @@ parameter passing by value or by reference, complex conditional loops , recursio
 
 Task: Given a source program written in Cimple , generate the final code written in assembly.
 
-The phaces of the implementation are the following:
+The phaces of the implementation are the following:  
 •Lexical Analysis  
 •Syntax Analysis  
 •Intermidiate Code Generation  
