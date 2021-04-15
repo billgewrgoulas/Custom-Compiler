@@ -371,8 +371,8 @@ def program():
 def block(blockName):
     global programName
     declarations()
-    genQuad('begin_block', blockName, '_', '_')
     subprograms()
+    genQuad('begin_block', blockName, '_', '_')
     statements()
     if blockName == programName:
         genQuad('halt' , '_' , '_' , '_')
