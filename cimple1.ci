@@ -1,0 +1,68 @@
+program testinMyCompiler
+    declare x, count;
+   
+
+    #subprogram 1#
+    function f(in l , in z)
+
+        declare x,y,z;
+
+        {
+            if( x-10 > 4-z)
+            { #if statement#
+                k:=-(x + ( -(3 + 10*y))) + z;
+                x := x+3*y+z+3-6*y;
+            }
+            else
+            {
+                myVariable := 10;
+            }; #here we must use ; , since its not the last; #
+
+            return (f(in x-1) + f(in x-2)); # ; optional here#
+        }
+
+    #subprogram 2#
+    procedure test(inout k)
+
+        declare z;
+    
+        function proc(in msg)
+        {
+            switchcase
+                case (msg = 10){
+                    hello:=msg;
+                    hey:=hello
+                }
+                case(msg <> 10)
+                    hey:=10;
+                default{
+                    hey:=11;
+                    hello:=hey;
+                    call f(in hello);
+                }; #optional#
+        }
+            #statements of precedure#
+        {
+            incase
+                case(x>10 + proc(inout z))
+                    if(x>10)
+                    {     
+                        x:= x-1;
+                    };  #only one statement (if statement) , thus it must end with ; #
+                case(x=10)
+                {
+                    x:=4;
+                };
+            
+            while(not [z<3])
+                i:=i+1;
+        }
+    
+    #main#
+    {   
+        print(count);
+        print(hello);
+        call test(in 10) #we get an error here if we use inout#
+    }.                   #since inout expects id#
+
+       

@@ -1,0 +1,58 @@
+program area
+	declare x1,x2,x3;
+	declare y1,y2,y3;
+	declare a,b,c,answer;
+	function square(in x)
+	{
+		return (x*x);
+	}
+	function sqrt(in num)
+	declare i;
+	{
+		i:=0;
+		while(square(in i)<=num){
+			i:=i+1;
+		};
+		return(i-1);
+	}
+	#if c=0 calculate area of rect #
+	#if b=0 calculate area of circle (c is the radius)#
+	#if a=0 or b=0 and c=0 retunrn -1#
+	#else calculate area of triangle#
+	function area(in a,in b,in c)
+	declare ans,t;
+	{
+		if(c=0){
+			ans:=a*b;
+			return (ans);
+		};
+		if(b=0){
+			ans:=a*square(in c);
+			return(ans)
+		};
+		if(a=0){
+			return(-1);
+		}
+		else{
+			t:=a/2+b/2+c/2;
+			ans:=sqrt(in t*(t - a)*(t - b)*(t - c));
+			return (ans);
+		};
+	}
+	{
+		input(x1);
+		input(x2);
+		input(x3);
+		input(y1);
+		input(y2);
+		input(y3);
+		a:=x2-x1;
+		b:=y2-y1;
+		answer:= area(in a,in b,in 0);
+		print(answer);
+		a:= sqrt(in square(in x2-x1)+square(in y2-y1));
+		b:= sqrt(in square(in x3-x2)+square(in y3-y2));
+		c:= sqrt(in square(in x1-x3)+square(in y1-y3));
+		answer:= area(in a,in b,in c);
+		print(answer);
+	}.

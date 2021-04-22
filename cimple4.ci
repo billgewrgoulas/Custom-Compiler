@@ -1,0 +1,20 @@
+program testinMyCompiler
+    declare x, count, msg, hello, hey;
+
+    {
+        switchcase
+            case (msg = 10)
+            {
+                hello:=msg;
+                hey:=hello
+            }
+            case(msg <> 10)
+                hey:=10;
+            default{
+                hey:=11;
+                input(x);
+                print(x);
+            };
+    }.
+
+       
