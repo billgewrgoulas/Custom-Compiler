@@ -1402,8 +1402,8 @@ def statement():
 ##########################main#################################
 
 try:
-    #file = open(sys.argv[1], 'r')
-    file = open('cimple2.ci' , 'r')
+    file = open(sys.argv[1], 'r')
+    #file = open('cimple2.ci' , 'r')
     st = open('symtable.txt' , 'w')
 except:
     print('file could not be opened')
