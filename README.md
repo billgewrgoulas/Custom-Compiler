@@ -1,4 +1,4 @@
-# Compiler for Cimple programming language.
+# Programming language compiler.
 
 Cimple is a minified version of C programming language . While it doesnt support some of the basic features and tools that C does , 
 it provides a wide variety of structures and elements that have very intresting implementation patterns. Cimple supports functions and procedures , 
