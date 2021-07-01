@@ -671,18 +671,17 @@ def identOrKey():
             getNext()
         else:
             break
+            
+    if len(text) > 30:
+        print('error: character: %s , at line: %s ' % (text, line))
+        print('a word can not be more than 30 characters')
+        exit(1)
 
     if text in key_words.keys():
         return Token( key_words[text] , text, line)
 
     if text.isalnum():
         return Token('id_tk', text, line)
-    
-    if len(text) > 30:
-        print('error: character: %s , at line: %s ' % (text, line))
-        print('a word can not be more than 30 characters')
-        exit(1)
-    #not sure if its complete here
         
 def addOp():
     global char , line
