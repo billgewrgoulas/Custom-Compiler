@@ -1,7 +1,6 @@
 # Programming language compiler.
 
-Cimple is a minified version of C. While it doesnt support some of the basic features and tools that C does , 
-it provides a wide variety of structures and elements that have very intresting implementation patterns. Cimple supports functions and procedures , 
+Cimple is a small programming language that draws elements from other languages like C and pascal. While it doesnt support some of the basic features and tools that most languages do ,it provides a wide variety of structures and elements that have very intresting implementation patterns. Cimple supports functions and procedures , 
 parameter passing by value or by reference, complex conditional loops , recursive calls and even nesting in function declaration and many more.
 
 Task: Given a source program written in Cimple , generate the final code written in assembly.
