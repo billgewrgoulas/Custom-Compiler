@@ -1,0 +1,45 @@
+program test1
+declare a,A,B;
+
+    procedure f1(in a, inout b)
+
+    
+        procedure f2()
+
+        declare f1;
+
+            function f0()
+            {
+                print(a);
+                call()
+                return(a+1);
+            }
+
+        {
+            B:=A;
+            b:=a;
+            call f2();            
+        }
+    {
+        A:=2;
+    }
+
+    procedure f4()
+
+        function f7()
+        {
+            B:=A;
+            return(B);
+        }
+
+    {
+        B:=f7();
+    }
+
+{
+    #main#
+    a:=3;
+    A:=4;
+    call f1(in a, inout A);
+    print (B);
+ }.
